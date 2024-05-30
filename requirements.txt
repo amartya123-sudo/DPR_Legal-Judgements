@@ -1,4 +1,6 @@
 farm-haystack 
 transformers 
-farm-haystack[inference] 
+faiss-cpu
+farm-haystack[inference]
+farm-haystack[faiss]
 sentence-transformers 
