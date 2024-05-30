@@ -1,0 +1,7 @@
+streamlit
+faiss-cpu
+transformers
+sentence-transformers
+farm-haystack
+farm-haystack[faiss]
+farm-haystack[inference]
