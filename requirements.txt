@@ -1,7 +1,7 @@
 farm-haystack 
-transformers 
+transformers
+streamlit
 faiss-cpu
 farm-haystack[inference]
 farm-haystack[faiss]
-sentence-transformers 
-pydantic==1.10.14
+sentence-transformers
