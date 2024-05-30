@@ -4,4 +4,4 @@ faiss-cpu
 farm-haystack[inference]
 farm-haystack[faiss]
 sentence-transformers 
-pydantic==1.10.15
+pydantic==1.10.14
