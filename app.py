@@ -39,7 +39,7 @@ reader = FARMReader(model_name_or_path="deepset/bert-base-cased-squad2")
 
 pipeline = ExtractiveQAPipeline(reader=reader, retriever=retriever)
 
-query = st.input()
+query = st.text_input("Enter Question")
 # query = "What is the subject matter of the petition in the Sadanand S. Varde case?"
 result = pipeline.run(query=query, params={"Retriever": {"top_k": 10}, "Reader": {"top_k": 5}})
 
