@@ -1,7 +1,5 @@
 farm-haystack 
 transformers
 streamlit
-faiss-cpu
 farm-haystack[inference]
-farm-haystack[faiss]
 sentence-transformers
