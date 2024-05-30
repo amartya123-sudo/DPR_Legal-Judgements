@@ -1,6 +1,6 @@
 import json
 import streamlit as st
-from haystack.document_stores import FAISSDocumentStore
+# from haystack.document_stores import FAISSDocumentStore
 from haystack.document_stores import InMemoryDocumentStore
 from transformers import DPRContextEncoder, DPRContextEncoderTokenizer
 from haystack.nodes import DensePassageRetriever
@@ -22,8 +22,8 @@ documents = [
     } for doc in data
 ]
 
-document_store = FAISSDocumentStore(embedding_dim=768, faiss_index_factory_str="Flat")
-# document_store = InMemoryDocumentStore()
+# document_store = FAISSDocumentStore(embedding_dim=768, faiss_index_factory_str="Flat")
+document_store = InMemoryDocumentStore()
 document_store.write_documents(documents)
 
 retriever = DensePassageRetriever(

@@ -1,8 +1,4 @@
-streamlit
-faiss-cpu
-transformers
-sentence-transformers
-scikit-learn
-farm-haystack
-farm-haystack[faiss]
-farm-haystack[inference]
+farm-haystack 
+transformers 
+farm-haystack[inference] 
+sentence-transformers 
