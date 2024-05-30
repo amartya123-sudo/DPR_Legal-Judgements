@@ -7,7 +7,7 @@ from haystack.nodes import DensePassageRetriever
 from haystack.nodes import FARMReader
 from haystack.pipelines import ExtractiveQAPipeline
 
-st.header("DPR on Supreme Court Judgements (Capital Gain)")
+st.title("DPR on Supreme Court Judgements (Capital Gain)")
 
 with open("responses.json", 'r') as f:
   data = json.load(f)
@@ -39,9 +39,21 @@ reader = FARMReader(model_name_or_path="deepset/bert-base-cased-squad2")
 
 pipeline = ExtractiveQAPipeline(reader=reader, retriever=retriever)
 
-query = st.text_input("Enter Question")
-# query = "What is the subject matter of the petition in the Sadanand S. Varde case?"
-result = pipeline.run(query=query, params={"Retriever": {"top_k": 10}, "Reader": {"top_k": 5}})
+query = st.text_input("Enter your query:", "")
 
-for answer in result['answers']:
-    st.markdown(f"=====================\nAnswer: {answer.answer}\nContext: {answer.context}\nScore: {answer.score}")
+if query:
+    with st.spinner("Searching..."):
+        results = pipeline.run(query=query, params={"Retriever": {"top_k": 5}})
+        st.write("Results:")
+        for idx, result in enumerate(results["documents"]):
+            st.write(f"**{idx + 1}. {result.meta['name']}**")
+            st.write(f"URL: {result.meta['url']}")
+            st.write(result.content)
+            st.write("---")
+
+# query = st.text_input("Enter Question")
+# # query = "What is the subject matter of the petition in the Sadanand S. Varde case?"
+# result = pipeline.run(query=query, params={"Retriever": {"top_k": 10}, "Reader": {"top_k": 5}})
+
+# for answer in result['answers']:
+#     st.markdown(f"=====================\nAnswer: {answer.answer}\nContext: {answer.context}\nScore: {answer.score}")
