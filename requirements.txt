@@ -2,6 +2,7 @@ streamlit
 faiss-cpu
 transformers
 sentence-transformers
+scikit-learn
 farm-haystack
 farm-haystack[faiss]
 farm-haystack[inference]
