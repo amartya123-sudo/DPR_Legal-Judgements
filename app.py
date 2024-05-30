@@ -33,7 +33,7 @@ retriever = DensePassageRetriever(
 )
 
 document_store.update_embeddings(retriever)
-document_store.save("faiss_index")
+# document_store.save("faiss_index")
 
 reader = FARMReader(model_name_or_path="deepset/bert-base-cased-squad2")
 
