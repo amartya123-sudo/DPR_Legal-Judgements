@@ -1,7 +1,5 @@
-name: faiss9
 channels:
   - defaults
-  - conda-forge
 dependencies:
   - python=3.9.19
   - pip
@@ -199,3 +197,4 @@ dependencies:
       - wsproto==1.2.0
       - xlsxwriter==3.2.0
       - zipp==3.19.0
+prefix: /opt/conda
