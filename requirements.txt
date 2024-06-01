@@ -1,5 +1,4 @@
-farm-haystack 
+haystack-ai
 transformers
 streamlit
-farm-haystack[inference]
 sentence-transformers

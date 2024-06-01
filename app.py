@@ -1,8 +1,6 @@
 import json
 import pickle
 import streamlit as st
-# from haystack.document_stores import FAISSDocumentStore
-from haystack.document_stores import InMemoryDocumentStore
 from transformers import DPRContextEncoder, DPRContextEncoderTokenizer
 from haystack.nodes import DensePassageRetriever
 from haystack.nodes import FARMReader
