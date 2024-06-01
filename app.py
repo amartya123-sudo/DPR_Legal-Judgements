@@ -1,7 +1,6 @@
 import json
 import pickle
 import streamlit as st
-from transformers import DPRContextEncoder, DPRContextEncoderTokenizer
 from haystack.nodes import DensePassageRetriever
 from haystack.nodes import FARMReader
 from haystack.pipelines import ExtractiveQAPipeline
