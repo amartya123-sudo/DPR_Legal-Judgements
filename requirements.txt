@@ -1,0 +1,3 @@
+farm-haystack[all]
+transformers
+streamlit
