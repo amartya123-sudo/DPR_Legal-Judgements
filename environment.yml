@@ -2,6 +2,7 @@ name: faiss9
 channels:
   - defaults
 dependencies:
+  - python=3.9.19
   - pip:
       - accelerate==0.30.1
       - alembic==1.13.1
