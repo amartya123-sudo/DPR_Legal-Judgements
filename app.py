@@ -21,7 +21,7 @@ st.title("DPR on Supreme Court Judgements (Capital Gain)")
 # ]
 
 # document_store = FAISSDocumentStore(embedding_dim=768, faiss_index_factory_str="Flat", sql_url="sqlite:///faiss_document_store.d")
-with open("inmemory_document_store.pkl", "rb") as f:
+with open("./inmemory_document_store.pkl", "rb") as f:
     document_store = pickle.load(f)
 # document_store.write_documents(documents)
 

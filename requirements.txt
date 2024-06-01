@@ -1,3 +1,4 @@
 farm-haystack
 transformers
 streamlit
+torch
