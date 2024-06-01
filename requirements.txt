@@ -1,4 +1,6 @@
 farm-haystack
+farm-haystack[inference]
+sentence-transformers
 transformers
 streamlit
 torch
